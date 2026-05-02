@@ -32,7 +32,7 @@ const Home = () => {
   }, []);
 
   const filteredProducts = products.filter(p => {
-    const catMatch = selectedCategory === 'All' || p.categoryName === selectedCategory;
+    const catMatch = selectedCategory === 'All' || p.Category.name === selectedCategory;
     const priceMatch = p.finalPrice <= priceRange;
     return catMatch && priceMatch;
   });

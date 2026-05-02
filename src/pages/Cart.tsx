@@ -113,7 +113,7 @@ const Cart = () => {
                   <div className="flex-1 space-y-4">
                     <div className="flex justify-between items-start">
                       <div>
-                        <span className="text-[10px] text-orange-500 uppercase tracking-widest font-bold mb-1 block">{item.categoryName}</span>
+                        <span className="text-[10px] text-orange-500 uppercase tracking-widest font-bold mb-1 block">{item.Category.name}</span>
                         <h3 className="text-xl font-light tracking-tight">{item.name}</h3>
                       </div>
                       <button 

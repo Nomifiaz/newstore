@@ -9,14 +9,14 @@ const Banner = () => {
     <section className="relative h-[85vh] w-full overflow-hidden bg-black mt-16">
       <motion.div 
         initial={{ opacity: 0, scale: 1.1 }}
-        animate={{ opacity: 0.6, scale: 1 }}
+        animate={{ opacity: 0.5, scale: 1 }}
         transition={{ duration: 1.5 }}
         className="absolute inset-0"
       >
         <img 
-          src={getImageUrl("/uploads/1758100603435-WhatsApp Image 2025-09-17 at 2.14.56 PM (1).jpeg")} 
-          alt="Luxury Fashion" 
-          className="w-full h-full object-cover"
+          src="https://images.unsplash.com/photo-1550745165-9bc0b252726f?auto=format&fit=crop&q=80&w=2000" 
+          alt="Modern Electronics" 
+          className="w-full h-full object-cover grayscale brightness-50"
         />
       </motion.div>
       
@@ -27,21 +27,21 @@ const Banner = () => {
           transition={{ duration: 0.8, delay: 0.5 }}
         >
           <span className="text-orange-500 uppercase tracking-[0.3em] font-bold text-sm mb-4 block">
-            New Arrival 2026
+            Digital Collective 2026
           </span>
           <h1 className="text-6xl md:text-8xl font-light text-white leading-tight mb-8 tracking-tighter">
-            ELEGANCE IN <br />
-            <span className="font-bold italic">EVERY THREAD</span>
+            NEXT GEN <br />
+            <span className="font-bold italic text-orange-500">LIFESTYLE</span>
           </h1>
-          <p className="text-white/60 max-w-lg mb-10 text-lg leading-relaxed">
-            Discover our curated collection of luxury Pakistani embroidered lawn suits and premium bedding sets. 
-            Designed for those who appreciate the finer details.
+          <p className="text-white/40 max-w-lg mb-10 text-lg leading-relaxed font-light">
+            Merging state-of-the-art tech with ultimate luxury. 
+            Experience the future of comfort and connectivity through our curated essentials.
           </p>
           <Link 
             to="/products"
-            className="group flex items-center space-x-3 bg-white text-black px-8 py-4 rounded-full font-bold uppercase tracking-widest text-sm hover:bg-orange-500 hover:text-white transition-all duration-500"
+            className="group flex items-center space-x-3 bg-white text-black px-10 py-5 rounded-full font-bold uppercase tracking-widest text-xs hover:bg-orange-500 hover:text-white transition-all duration-500 shadow-[0_0_30px_rgba(255,255,255,0.1)] hover:shadow-orange-500/40"
           >
-            <span>Explore Collection</span>
+            <span>Enter Studio</span>
             <ArrowRight size={18} className="group-hover:translate-x-2 transition-transform" />
           </Link>
         </motion.div>

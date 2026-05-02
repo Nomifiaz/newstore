@@ -6,13 +6,19 @@ export interface Product {
   stock: number;
   images: string[];
   categoryId: number;
-  categoryName: string;
+  Category: {
+    id: number;
+    name: string;
+  };
   discountType: string;
   discountValue: number;
   finalPrice: number;
   rating: number;
   rating_count: number;
   image: string;
+  averageRating: string;
+  totalRatings: number;
+  discounted_price: number;
 }
 
 export interface CartItem extends Product {

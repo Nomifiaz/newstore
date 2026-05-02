@@ -20,7 +20,7 @@ async function startServer() {
   }
   app.use('/uploads', express.static(uploadsPath));
 
-  // Mock Data from User
+  // Mock Data from User Prompt
   const categories = ["Clothes", "Bed Sheets"];
   const products = [
     {
@@ -33,17 +33,29 @@ async function startServer() {
             "/uploads/1758100603435-WhatsApp Image 2025-09-17 at 2.14.56 PM (1).jpeg"
         ],
         "categoryId": 1,
-        "categoryName": "Clothes",
         "discountType": "percentage",
         "discountValue": 10,
         "finalPrice": 5111.1,
+        "createdAt": "2025-09-17T09:16:43.000Z",
+        "updatedAt": "2025-09-17T09:16:43.000Z",
+        "Category": {
+            "id": 1,
+            "name": "Clothes",
+            "isDeleted": false,
+            "createdAt": "2025-09-17T09:10:16.000Z",
+            "updatedAt": "2025-09-17T09:10:16.000Z"
+        },
+        "Ratings": [],
+        "averageRating": "4.5",
+        "totalRatings": 12,
         "rating": 4.5,
         "rating_count": 12,
+        "discounted_price": 5111.1,
         "image": "/uploads/1758100603435-WhatsApp Image 2025-09-17 at 2.14.56 PM (1).jpeg"
     },
     {
         "id": 2,
-        "name": "Maria.B Pakistani Luxury Embroidered Lawn Suit",
+        "name": "Maria.B Pakistani Luxury Embroidered Lawn Suit - V2",
         "description": "Fabric:Printed Lawn .Work: Embroidery and Printed .Includes: Kameez, Trouser and Dupatta.Accessories: Tassels and hanging pearls will be provided same as the model picture.",
         "price": 10000,
         "stock": 34,
@@ -51,12 +63,24 @@ async function startServer() {
             "/uploads/1758100854974-WhatsApp Image 2025-09-17 at 2.20.24 PM.jpeg"
         ],
         "categoryId": 1,
-        "categoryName": "Clothes",
         "discountType": "percentage",
         "discountValue": 50,
         "finalPrice": 5000,
+        "createdAt": "2025-09-17T09:20:55.000Z",
+        "updatedAt": "2025-09-17T09:20:55.000Z",
+        "Category": {
+            "id": 1,
+            "name": "Clothes",
+            "isDeleted": false,
+            "createdAt": "2025-09-17T09:10:16.000Z",
+            "updatedAt": "2025-09-17T09:10:16.000Z"
+        },
+        "Ratings": [],
+        "averageRating": "4.0",
+        "totalRatings": 8,
         "rating": 4.0,
         "rating_count": 8,
+        "discounted_price": 5000,
         "image": "/uploads/1758100854974-WhatsApp Image 2025-09-17 at 2.20.24 PM.jpeg"
     },
     {
@@ -69,17 +93,29 @@ async function startServer() {
             "/uploads/1758101066009-WhatsApp Image 2025-09-17 at 2.20.24 PM.jpeg"
         ],
         "categoryId": 2,
-        "categoryName": "Bed Sheets",
         "discountType": "percentage",
         "discountValue": 30,
         "finalPrice": 4900,
+        "createdAt": "2025-09-17T09:24:26.000Z",
+        "updatedAt": "2025-09-17T09:27:04.000Z",
+        "Category": {
+            "id": 2,
+            "name": "Bed Sheets",
+            "isDeleted": false,
+            "createdAt": "2025-09-17T09:24:12.000Z",
+            "updatedAt": "2025-09-17T09:24:12.000Z"
+        },
+        "Ratings": [],
+        "averageRating": "4.8",
+        "totalRatings": 25,
         "rating": 4.8,
         "rating_count": 25,
+        "discounted_price": 4900,
         "image": "/uploads/1758101066009-WhatsApp Image 2025-09-17 at 2.20.24 PM.jpeg"
     },
     {
         "id": 4,
-        "name": "SLIME Comforter Set- 7 Pcs",
+        "name": "SLIME Comforter Set- 7 Pcs Premium",
         "description": "1 x Bed Sheet 90 x 95 Inches1 x Comforter Filled (150 GSM) 90 x 95 Inches4 x Pillow Covers Printed 18 x 28 Inches1 x Cushion Cover Printed 16 x 16 Inches",
         "price": 7000,
         "stock": 34,
@@ -87,12 +123,24 @@ async function startServer() {
             "/uploads/1758101352025-WhatsApp Image 2025-09-17 at 2.22.39 PM.jpeg"
         ],
         "categoryId": 2,
-        "categoryName": "Bed Sheets",
         "discountType": "percentage",
         "discountValue": 30,
         "finalPrice": 4900,
+        "createdAt": "2025-09-17T09:29:12.000Z",
+        "updatedAt": "2025-09-17T09:29:12.000Z",
+        "Category": {
+            "id": 2,
+            "name": "Bed Sheets",
+            "isDeleted": false,
+            "createdAt": "2025-09-17T09:24:12.000Z",
+            "updatedAt": "2025-09-17T09:24:12.000Z"
+        },
+        "Ratings": [],
+        "averageRating": "4.2",
+        "totalRatings": 15,
         "rating": 4.2,
         "rating_count": 15,
+        "discounted_price": 4900,
         "image": "/uploads/1758101352025-WhatsApp Image 2025-09-17 at 2.22.39 PM.jpeg"
     },
     {
@@ -105,12 +153,24 @@ async function startServer() {
             "/uploads/images-1777651786226-537739729.png"
         ],
         "categoryId": 1,
-        "categoryName": "Clothes",
         "discountType": "percentage",
         "discountValue": 14,
         "finalPrice": 20640,
+        "createdAt": "2026-05-01T16:09:46.000Z",
+        "updatedAt": "2026-05-01T18:24:29.000Z",
+        "Category": {
+            "id": 1,
+            "name": "Clothes",
+            "isDeleted": false,
+            "createdAt": "2025-09-17T09:10:16.000Z",
+            "updatedAt": "2025-09-17T09:10:16.000Z"
+        },
+        "Ratings": [],
+        "averageRating": "4.9",
+        "totalRatings": 42,
         "rating": 4.9,
         "rating_count": 42,
+        "discounted_price": 20640,
         "image": "/uploads/images-1777651786226-537739729.png"
     }
   ];

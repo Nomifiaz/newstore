@@ -52,11 +52,11 @@ const ProductCard: React.FC<ProductCardProps> = ({ product, index }) => {
       <div className="mt-6 space-y-2">
         <div className="flex justify-between items-start">
           <span className="text-[10px] uppercase tracking-[0.2em] text-white/40 font-bold">
-            {product.categoryName}
+            {product.Category.name}
           </span>
           <div className="flex items-center space-x-1">
             <Star size={10} className="fill-orange-500 text-orange-500" />
-            <span className="text-[10px] text-white/60">{product.rating}</span>
+            <span className="text-[10px] text-white/60">{product.averageRating}</span>
           </div>
         </div>
         

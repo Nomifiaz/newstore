@@ -114,7 +114,7 @@ const ProductDetails = () => {
           >
             <div className="mb-8">
               <span className="text-orange-500 uppercase tracking-[0.3em] font-bold text-xs mb-4 block">
-                {product.categoryName}
+                {product.Category.name}
               </span>
               <h1 className="text-5xl font-light tracking-tighter mb-6">{product.name}</h1>
               <div className="flex items-center space-x-6 pb-6 border-b border-white/10">
@@ -124,7 +124,7 @@ const ProductDetails = () => {
                       <Star key={i} size={14} className={i < Math.floor(product.rating) ? "fill-orange-500 text-orange-500" : "text-white/20"} />
                     ))}
                   </div>
-                  <span className="text-xs text-white/60">({product.rating_count} reviews)</span>
+                  <span className="text-xs text-white/60">({product.totalRatings} reviews)</span>
                 </div>
                 <div className="w-[1px] h-4 bg-white/10"></div>
                 <span className="text-xs text-green-500 font-bold uppercase tracking-widest">{product.stock > 0 ? 'In Stock' : 'Out of Stock'}</span>
