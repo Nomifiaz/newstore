@@ -3,6 +3,7 @@ import { api } from '../services/api';
 import { Order } from '../types';
 import { motion } from 'motion/react';
 import { Package, Clock, MapPin, Phone } from 'lucide-react';
+import { getImageUrl } from '../lib/utils';
 
 const Orders = () => {
   const [orders, setOrders] = useState<Order[]>([]);
@@ -93,12 +94,17 @@ const Orders = () => {
                       <h3 className="text-xs uppercase tracking-[0.3em] font-bold text-white/20 mb-6 font-italix">Line Items</h3>
                       <div className="space-y-4">
                         {order.OrderItems.map((item, i) => (
-                          <div key={i} className="flex justify-between items-center p-4 bg-black/40 rounded-xl border border-white/5">
-                            <div className="flex flex-col">
-                              <span className="text-xs font-bold uppercase tracking-wide mb-1">{item.productName}</span>
-                              <span className="text-[10px] text-white/30 uppercase font-bold tracking-widest">QTY: {item.quantity} × Rs. {parseFloat(item.price).toLocaleString()}</span>
+                          <div key={i} className="flex items-center space-x-4 p-4 bg-black/40 rounded-xl border border-white/5">
+                            <div className="w-12 h-16 bg-zinc-900 rounded overflow-hidden flex-shrink-0">
+                               <img src={getImageUrl(item.Product.images[0])} className="w-full h-full object-cover" />
                             </div>
-                            <span className="text-sm font-bold tracking-tighter">Rs. {parseFloat(item.total).toLocaleString()}</span>
+                            <div className="flex-1 flex justify-between items-center">
+                              <div className="flex flex-col">
+                                <span className="text-xs font-bold uppercase tracking-wide mb-1">{item.productName}</span>
+                                <span className="text-[10px] text-white/30 uppercase font-bold tracking-widest">QTY: {item.quantity} × Rs. {parseFloat(item.price).toLocaleString()}</span>
+                              </div>
+                              <span className="text-sm font-bold tracking-tighter">Rs. {parseFloat(item.total).toLocaleString()}</span>
+                            </div>
                           </div>
                         ))}
                       </div>

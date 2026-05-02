@@ -2,6 +2,7 @@ import React from 'react';
 import { motion } from 'motion/react';
 import { ArrowRight } from 'lucide-react';
 import { Link } from 'react-router-dom';
+import { getImageUrl } from '../lib/utils';
 
 const Banner = () => {
   return (
@@ -13,7 +14,7 @@ const Banner = () => {
         className="absolute inset-0"
       >
         <img 
-          src="https://images.unsplash.com/photo-1441986300917-64674bd600d8?auto=format&fit=crop&q=80&w=2000" 
+          src={getImageUrl("/uploads/1758100603435-WhatsApp Image 2025-09-17 at 2.14.56 PM (1).jpeg")} 
           alt="Luxury Fashion" 
           className="w-full h-full object-cover"
         />

@@ -4,6 +4,7 @@ import { Cart } from '../types';
 import { motion } from 'motion/react';
 import { useNavigate } from 'react-router-dom';
 import { CreditCard, Truck, MapPin, Phone, CheckCircle2 } from 'lucide-react';
+import { getImageUrl } from '../lib/utils';
 
 const Checkout = () => {
   const [cart, setCart] = useState<Cart | null>(null);
@@ -148,7 +149,7 @@ const Checkout = () => {
                 {cart?.items.map(item => (
                   <div key={item.id} className="flex space-x-4">
                     <div className="w-16 h-20 bg-zinc-900 rounded overflow-hidden flex-shrink-0">
-                      <img src={item.image} className="w-full h-full object-cover" />
+                      <img src={getImageUrl(item.image)} className="w-full h-full object-cover" />
                     </div>
                     <div className="flex-1 py-1">
                       <h4 className="text-[11px] font-bold uppercase tracking-wide line-clamp-1">{item.name}</h4>

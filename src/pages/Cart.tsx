@@ -4,6 +4,7 @@ import { Cart as CartType } from '../types';
 import { Trash2, ArrowRight, ShoppingBag, ArrowLeft } from 'lucide-react';
 import { motion, AnimatePresence } from 'motion/react';
 import { Link, useNavigate } from 'react-router-dom';
+import { getImageUrl } from '../lib/utils';
 
 const Cart = () => {
   const [cart, setCart] = useState<CartType | null>(null);
@@ -106,7 +107,7 @@ const Cart = () => {
                   className="flex flex-col sm:flex-row items-center sm:space-x-8 p-6 bg-zinc-900/50 rounded-lg border border-white/5 relative group"
                 >
                   <div className="w-32 aspect-[3/4] rounded-sm overflow-hidden bg-zinc-800 mb-4 sm:mb-0">
-                    <img src={item.image} alt={item.name} className="w-full h-full object-cover" />
+                    <img src={getImageUrl(item.image)} alt={item.name} className="w-full h-full object-cover" />
                   </div>
                   
                   <div className="flex-1 space-y-4">

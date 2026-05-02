@@ -5,6 +5,7 @@ import { Product } from '../types';
 import { Star, ShoppingBag, ArrowLeft, Shield, Truck, RotateCcw } from 'lucide-react';
 import { motion, AnimatePresence } from 'motion/react';
 import { useAuth } from '../components/AuthProvider';
+import { getImageUrl } from '../lib/utils';
 
 const ProductDetails = () => {
   const { id } = useParams<{ id: string }>();
@@ -89,7 +90,7 @@ const ProductDetails = () => {
           >
             <div className="aspect-[3/4] overflow-hidden bg-zinc-900 rounded-sm">
               <img 
-                src={product.image} 
+                src={getImageUrl(product.image)} 
                 alt={product.name} 
                 className="w-full h-full object-cover"
               />
@@ -98,7 +99,7 @@ const ProductDetails = () => {
             <div className="grid grid-cols-4 gap-4">
               {[...Array(4)].map((_, i) => (
                 <div key={i} className="aspect-square bg-zinc-900 rounded-sm overflow-hidden opacity-50 hover:opacity-100 transition-opacity cursor-pointer">
-                  <img src={product.image} className="w-full h-full object-cover" />
+                  <img src={getImageUrl(product.image)} className="w-full h-full object-cover" />
                 </div>
               ))}
             </div>

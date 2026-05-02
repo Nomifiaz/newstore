@@ -3,7 +3,7 @@ import { motion } from 'motion/react';
 import { Star, ShoppingBag, Eye } from 'lucide-react';
 import { Link } from 'react-router-dom';
 import { Product } from '../types';
-import { cn } from '../lib/utils';
+import { cn, getImageUrl } from '../lib/utils';
 
 interface ProductCardProps {
   product: Product;
@@ -21,7 +21,7 @@ const ProductCard: React.FC<ProductCardProps> = ({ product, index }) => {
     >
       <div className="relative aspect-[3/4] overflow-hidden bg-zinc-900 rounded-sm">
         <img
-          src={product.image}
+          src={getImageUrl(product.image)}
           alt={product.name}
           className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
         />

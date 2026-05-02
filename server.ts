@@ -12,7 +12,7 @@ async function startServer() {
 
   app.use(express.json());
 
-  // Mock Data
+  // Mock Data from User
   const categories = ["Clothes", "Bed Sheets"];
   const products = [
     {
@@ -31,12 +31,12 @@ async function startServer() {
         "finalPrice": 5111.1,
         "rating": 4.5,
         "rating_count": 12,
-        "image": "https://images.unsplash.com/photo-1594932224828-b4b059b6fe68?auto=format&fit=crop&q=80&w=800"
+        "image": "/uploads/1758100603435-WhatsApp Image 2025-09-17 at 2.14.56 PM (1).jpeg"
     },
     {
         "id": 2,
-        "name": "Luxury Embroidered Lawn Suit",
-        "description": "Fabric:Printed Lawn .Work: Embroidery and Printed .Includes: Kameez, Trouser and Dupatta.",
+        "name": "Maria.B Pakistani Luxury Embroidered Lawn Suit",
+        "description": "Fabric:Printed Lawn .Work: Embroidery and Printed .Includes: Kameez, Trouser and Dupatta.Accessories: Tassels and hanging pearls will be provided same as the model picture.",
         "price": 10000,
         "stock": 34,
         "images": [
@@ -49,12 +49,12 @@ async function startServer() {
         "finalPrice": 5000,
         "rating": 4.0,
         "rating_count": 8,
-        "image": "https://images.unsplash.com/photo-1551488831-00ddcb6c6bd3?auto=format&fit=crop&q=80&w=800"
+        "image": "/uploads/1758100854974-WhatsApp Image 2025-09-17 at 2.20.24 PM.jpeg"
     },
     {
         "id": 3,
         "name": "SLIME Comforter Set- 7 Pcs",
-        "description": "1 x Bed Sheet 90 x 95 Inches, 1 x Comforter Filled, 4 x Pillow Covers Printed, 1 x Cushion Cover Printed",
+        "description": "1 x Bed Sheet 90 x 95 Inches1 x Comforter Filled (150 GSM) 90 x 95 Inches4 x Pillow Covers Printed 18 x 28 Inches1 x Cushion Cover Printed 16 x 16 Inches",
         "price": 7000,
         "stock": 34,
         "images": [
@@ -67,12 +67,12 @@ async function startServer() {
         "finalPrice": 4900,
         "rating": 4.8,
         "rating_count": 25,
-        "image": "https://images.unsplash.com/photo-1522771739844-6a9f6d5f14af?auto=format&fit=crop&q=80&w=800"
+        "image": "/uploads/1758101066009-WhatsApp Image 2025-09-17 at 2.20.24 PM.jpeg"
     },
     {
         "id": 4,
-        "name": "Premium Bedding Set",
-        "description": "High quality fabric with elegant patterns. Perfect for a modern bedroom.",
+        "name": "SLIME Comforter Set- 7 Pcs",
+        "description": "1 x Bed Sheet 90 x 95 Inches1 x Comforter Filled (150 GSM) 90 x 95 Inches4 x Pillow Covers Printed 18 x 28 Inches1 x Cushion Cover Printed 16 x 16 Inches",
         "price": 7000,
         "stock": 34,
         "images": [
@@ -85,12 +85,12 @@ async function startServer() {
         "finalPrice": 4900,
         "rating": 4.2,
         "rating_count": 15,
-        "image": "https://images.unsplash.com/photo-1505691938895-1758d7eaa511?auto=format&fit=crop&q=80&w=800"
+        "image": "/uploads/1758101352025-WhatsApp Image 2025-09-17 at 2.22.39 PM.jpeg"
     },
     {
         "id": 5,
-        "name": "Elegant Silk Suit",
-        "description": "Sophisticated silk suit for special occasions. Handcrafted embroidery details.",
+        "name": "tesjjj",
+        "description": "test description for elegant suit",
         "price": 24000,
         "stock": 22,
         "images": [
@@ -103,7 +103,7 @@ async function startServer() {
         "finalPrice": 20640,
         "rating": 4.9,
         "rating_count": 42,
-        "image": "https://images.unsplash.com/photo-1583337130417-3346a1be7dee?auto=format&fit=crop&q=80&w=800"
+        "image": "/uploads/images-1777651786226-537739729.png"
     }
   ];
 
