@@ -2,6 +2,7 @@ import express from "express";
 import { createServer as createViteServer } from "vite";
 import path from "path";
 import { fileURLToPath } from "url";
+import fs from "fs";
 
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
@@ -11,6 +12,13 @@ async function startServer() {
   const PORT = 3000;
 
   app.use(express.json());
+
+  // Serve uploads directory
+  const uploadsPath = path.join(process.cwd(), 'uploads');
+  if (!fs.existsSync(uploadsPath)) {
+    fs.mkdirSync(uploadsPath, { recursive: true });
+  }
+  app.use('/uploads', express.static(uploadsPath));
 
   // Mock Data from User
   const categories = ["Clothes", "Bed Sheets"];
